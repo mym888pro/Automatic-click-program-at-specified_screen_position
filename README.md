@@ -1,0 +1,1 @@
+# Automatic-click-program-at-specified_screen_position
