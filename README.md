@@ -27,3 +27,6 @@ Android上的点击速度不如电脑快
 前台要求：
 程序运行时需要保持屏幕亮着且不锁屏
 如果需要在Android上实现更专业的自动点击，可以考虑使用Auto.js等专门为Android设计的自动化工具。（仅作推荐）
+本文件库中的txt文件中的代码是Python代码for qpython的，请复制到qpython中运行
+若未安装qpython，可前往https://play.google.com/store/apps/details?id=org.qpython.qpy3&hl=zh-cn（需翻墙）下载
+或在软件商店安装（无需翻墙）
