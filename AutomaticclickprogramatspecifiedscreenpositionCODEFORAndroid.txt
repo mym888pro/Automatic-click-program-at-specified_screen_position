@@ -1,0 +1,30 @@
+import androidhelper
+import time
+
+droid = androidhelper.Android()
+
+def auto_clicker(x, y, clicks=1000, interval=0.1):
+    print(f"将在位置 ({x}, {y}) 自动点击 {clicks} 次")
+    print("5秒后开始，请保持屏幕在前...")
+    time.sleep(5)
+    
+    for i in range(clicks):
+        droid.touch(x, y, 'DOWN_AND_UP')
+        time.sleep(interval)
+    
+    print("自动点击完成")
+
+if __name__ == "__main__":
+    # 获取屏幕尺寸
+    display = droid.getDisplaySize().result
+    print(f"屏幕分辨率: {display[0]}x{display[1]}")
+    
+    try:
+        x = int(input("X坐标(建议100-500): "))
+        y = int(input("Y坐标(建议100-500): "))
+        clicks = int(input("点击次数(默认1000): ") or 1000)
+        interval = float(input("点击间隔(秒，默认0.1): ") or 0.1)
+        
+        auto_clicker(x, y, clicks, interval)
+    except ValueError:
+        print("输入错误，请输入数字")
